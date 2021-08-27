@@ -1,0 +1,59 @@
+<리스트 컴프리헨션>
+2차원 리스트 초기화 때 사용
+
+M * M 크기 2차원 리스트 초기화
+array = [[0] * m for _in range(n)]
+  _: 반복을 수행하되, 반복을 위한 변수 값 무시
+
+<리스트 관련 메서드>
+-append()
+-sort(): (오름차순: 변수.sort() / 내림차순: 변수.sort(reverse=True)
+-reverse(): 리스트 원소 순서 뒤집음
+-insert(위치 인덱스, 삽입할 값)
+-count(특정값): 특정값 가지는 데이터 개수
+-remove(특정값): 여러개일 때에는 값 하나만 제거
+
+<reverse()_리스트에서 특정 값 가지는 원소 모두 제거>
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = {3, 5}
+result = [i for i in a
+	if i not in remove_set]
+
+<사전자료형>_인덱스 x
+data = dict()
+data['사과'] = 'Apple'
+       (key        value)
+
+if '사과' in data:
+	#사과가 data에 존재할 경우
+
+키 데이터 뽑아 list -> keys()
+값 데이터 뽑아 list -> values()
+
+<집합자료형>_인덱스 x
+data = set([1, 1, 2, 3, 4, 5]) => {1, 2, 3, 4, 5}
+	*중복을 제거
+
+-합집합: a | b
+-교집합: a & b
+-차집합: a - b
+
+-.add: 데이터 추가
+-.update([5, 6]) 원소 여러개 추가
+-.remove(3) 삭제
+
+<데이터 입력>
+data = list(map(int, input().split()))
+                        --------------
+                         공백으로 구분
+
+import sys
+data = sys.stdin.readline().rstrip() -> 문자열을 빠르게 입력받음(시간 줄임)
+
+<global>
+a = 0
+def func():
+   global a
+   a += 1
+
+print(a)
